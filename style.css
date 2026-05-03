@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  gap: 20px;
+  padding: 20px;
+  height: 700px;
+}
+
+/* common style */
+.container > div {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 20px;
+  background: linear-gradient(to bottom, #4facfe, #8e2de2);
+}
+
+/* positioning manually */
+
+/* header full width */
+.header {
+  grid-column: 1 / 4;
+}
+
+/* sidebar 2 rows height */
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+/* content1 takes 2 columns */
+.content1 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+/* bottom contents */
+.content2 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.content3 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+/* footer full width */
+.footer {
+  grid-column: 1 / 4;
+}
